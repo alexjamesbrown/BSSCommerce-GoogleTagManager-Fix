@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<!--
+/**
+* BSS Commerce Co.
+*
+* NOTICE OF LICENSE
+*
+* This source file is subject to the EULA
+* that is bundled with this package in the file LICENSE.txt.
+* It is also available through the world-wide-web at this URL:
+* http://bsscommerce.com/Bss-Commerce-License.txt
+*
+* =================================================================
+*                 MAGENTO EDITION USAGE NOTICE
+* =================================================================
+* This package designed for Magento COMMUNITY edition
+* BSS Commerce does not guarantee correct work of this extension
+* on any other Magento edition except Magento COMMUNITY edition.
+* BSS Commerce does not provide extension support in case of
+* incorrect edition usage.
+* =================================================================
+*
+* @category   BSS
+* @package    Bss_GoogleTagManager
+* @author     Extension Team
+* @copyright  Copyright (c) 2014-2016 BSS Commerce Co. ( http://bsscommerce.com )
+* @license    http://bsscommerce.com/Bss-Commerce-License.txt
+*/
+-->
+<config>
+	<tabs>
+		<bss translate="label">
+			<label><![CDATA[BSS Commerce]]></label>
+			<sort_order>200</sort_order>
+		</bss>
+	</tabs>
+	<sections>
+		<bss_googletagmanager translate="label" module="googletagmanager">
+            <class>separator-top</class>
+            <label>Google Tag Manager</label>
+            <tab>bss</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>10</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+			<groups>
+                <general translate="label">
+                    <label><![CDATA[General]]></label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <fields>
+                        <enabled translate="label">
+                            <label><![CDATA[Enabled]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <account_number>
+                            <label><![CDATA[Account Number]]></label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </account_number>
+                        <enabled_transaction>
+                            <label><![CDATA[GA - Ecommerce]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled_transaction>
+                    </fields>
+                </general>					
+			</groups>
+        </bss_googletagmanager>
+	</sections>
+</config>
