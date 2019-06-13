@@ -91,7 +91,7 @@ class Bss_GoogleTagManager_Block_Multishipping_Transaction extends Mage_Core_Blo
 			if($i != $numberItems) {
 				$productsLayer .= "{
 			        'sku': '". $item->getSku() ."',
-			        'name': '". $item->getName() ."',
+					'name': '" . str_replace("'", '', $item->getName()) . "',
 			        'price': ". $item->getRowTotal() .",
 			        'category': '',
 			        'quantity': ". $item->getQtyOrdered() ." 
@@ -99,7 +99,7 @@ class Bss_GoogleTagManager_Block_Multishipping_Transaction extends Mage_Core_Blo
 			} else {
 				$productsLayer .= "{
 			        'sku': '". $item->getSku() ."',
-			        'name': '". $item->getName() ."',
+					'name': '" . str_replace("'", '', $item->getName()) . "',
 			        'price': ". $item->getRowTotal() .",
 			        'category': '',
 			        'quantity': ". $item->getQtyOrdered() ." 

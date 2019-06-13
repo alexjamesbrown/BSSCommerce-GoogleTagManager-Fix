@@ -82,7 +82,7 @@ class Bss_GoogleTagManager_Block_Transaction extends Mage_Core_Block_Template {
 			if($i != $numberItems) {
 				$productsLayer .= "{
 			        'sku': '". $item->getSku() ."',
-			        'name': '". $item->getName() ."',
+					'name': '" . str_replace("'", '', $item->getName()) . "',
 			        'price': ". $item->getRowTotal() .",
 			        'category': '',
 			        'quantity': ". $item->getQtyOrdered() ." 
@@ -90,7 +90,7 @@ class Bss_GoogleTagManager_Block_Transaction extends Mage_Core_Block_Template {
 			} else {
 				$productsLayer .= "{
 			        'sku': '". $item->getSku() ."',
-			        'name': '". $item->getName() ."',
+					'name': '" . str_replace("'", '', $item->getName()) . "',
 			        'price': ". $item->getRowTotal() .",
 			        'category': '',
 			        'quantity': ". $item->getQtyOrdered() ." 
